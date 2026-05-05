@@ -167,7 +167,7 @@ equipo = Equipo("Proyector", 30)
 asesoria = Asesoria("Consultoría", 100)
 
 # ==========================
-# RESERVAS USANDO PROCESAR()
+# RESERVAS
 # ==========================
 
 r1 = Reserva(c1, sala, 2)
