@@ -166,10 +166,19 @@ sala = Sala("Sala VIP", 50)
 equipo = Equipo("Proyector", 30)
 asesoria = Asesoria("Consultoría", 100)
 
-# Reservas
-sistema.crear_reserva(c1, sala, 2)
-sistema.crear_reserva(c1, equipo, 3)
-sistema.crear_reserva(c1, asesoria, 1)
+# ==========================
+# RESERVAS USANDO PROCESAR()
+# ==========================
 
-# Reserva con error
-sistema.crear_reserva(c2, sala, 2)
+r1 = Reserva(c1, sala, 2)
+print(r1.procesar())
+
+r2 = Reserva(c1, equipo, 3)
+print(r2.procesar())
+
+r3 = Reserva(c1, asesoria, 1)
+print(r3.procesar())
+
+# Reserva con error intencional
+r4 = Reserva(c2, sala, 2)
+print(r4.procesar())
