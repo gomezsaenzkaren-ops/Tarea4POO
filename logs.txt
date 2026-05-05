@@ -1,0 +1,45 @@
+[EVENTO] Cliente Ana agregado
+[ERROR] Error al crear el cliente
+Traceback (most recent call last):
+  File "c:\Users\gomez\Downloads\fase4-poo-excepciones-main\fase4-poo-excepciones-main\clientes.py", line 7, in __init__
+    raise ClienteError("El nombre solo debe contener letras")
+excepciones.ClienteError: El nombre solo debe contener letras
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\gomez\Downloads\fase4-poo-excepciones-main\fase4-poo-excepciones-main\main.py", line 22, in <module>
+    c2 = Cliente("Pedro123", "12", "correo")
+  File "c:\Users\gomez\Downloads\fase4-poo-excepciones-main\fase4-poo-excepciones-main\clientes.py", line 20, in __init__
+    raise ClienteError("Error al crear el cliente") from e
+excepciones.ClienteError: Error al crear el cliente
+
+[EVENTO] Reserva sala confirmada
+[ERROR] Error al procesar la reserva
+Traceback (most recent call last):
+  File "c:\Users\gomez\Downloads\fase4-poo-excepciones-main\fase4-poo-excepciones-main\reserva.py", line 18, in procesar
+    costo = self.servicio.calcular_costo(self.horas)
+  File "c:\Users\gomez\Downloads\fase4-poo-excepciones-main\fase4-poo-excepciones-main\servicio.py", line 29, in calcular_costo
+    raise ServicioError("Las horas deben ser mayores a 0")
+excepciones.ServicioError: Las horas deben ser mayores a 0
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\gomez\Downloads\fase4-poo-excepciones-main\fase4-poo-excepciones-main\main.py", line 40, in <module>
+    print("Costo:", r2.procesar())
+                    ~~~~~~~~~~~^^
+  File "c:\Users\gomez\Downloads\fase4-poo-excepciones-main\fase4-poo-excepciones-main\reserva.py", line 21, in procesar
+    raise ReservaError("Error al procesar la reserva") from e
+excepciones.ReservaError: Error al procesar la reserva
+
+[EVENTO] Reserva cancelada correctamente
+2026-05-05 13:51:23.416779 - Nombre inválido
+2026-05-05 13:51:23.417525 - EVENTO: Reserva confirmada correctamente
+2026-05-05 13:51:23.418079 - Proceso de reserva finalizado
+2026-05-05 13:51:23.418377 - EVENTO: Reserva confirmada correctamente
+2026-05-05 13:51:23.418548 - Proceso de reserva finalizado
+2026-05-05 13:51:23.418817 - EVENTO: Reserva confirmada correctamente
+2026-05-05 13:51:23.418976 - Proceso de reserva finalizado
+2026-05-05 13:51:23.419203 - ERROR: Nombre inválido
+2026-05-05 13:51:23.419386 - Proceso de reserva finalizado
